@@ -13,13 +13,11 @@
   "author": "Wellington Rocha",
   "license": "ISC",
   "dependencies": {
-    "@types/xmldom": "^0.1.29",
     "bignumber.js": "^9.0.0",
     "rimraf": "^3.0.0",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "@types/axios": "^0.14.0",
     "@types/jest": "^24.0.24",
     "@types/node": "^12.11.2",
     "jest": "^25.2.1",
