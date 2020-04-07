@@ -14,7 +14,7 @@ export interface ICandleModel {
     /**
      * Open.
      */
-    date: string[];
+    date?: string[];
 
     /**
      * Open.
@@ -25,6 +25,11 @@ export interface ICandleModel {
      * High.
      */
     high: number[];
+
+    /**
+     * High.
+     */
+    volume: number[];
 
     /**
      * Low.

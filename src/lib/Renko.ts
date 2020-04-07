@@ -28,7 +28,7 @@ export abstract class Renko {
             .times(brickSize)
             .decimalPlaces(0, BigNumber.ROUND_FLOOR)
             .toNumber();
-        const firstDate = candles.date[0];
+        const firstDate = candles.date !== undefined ? candles.date[0] : '';
         let trends: Array<{
             /**
              * Date.
@@ -69,7 +69,7 @@ export abstract class Renko {
             upTrend: true,
         });
         Object.keys(candles.open).forEach((index: any) => {
-            const date = candles.date[index];
+            const date = candles.date !== undefined ? candles.date[index]: '';
             const close = candles.close[index];
             const lastTrend = trends[trends.length - 1];
             let upTrend = lastTrend.upTrend;
@@ -147,7 +147,9 @@ export abstract class Renko {
             upTrend: [],
         } as any;
         trends.forEach((trend) => {
-            trendsResponse.date.push(trend.date);
+            if (trendsResponse.date) {
+                trendsResponse.date.push(trend.date);
+            }
             trendsResponse.open.push(trend.open);
             trendsResponse.high.push(trend.high);
             trendsResponse.low.push(trend.low);
