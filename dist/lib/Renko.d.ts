@@ -11,3 +11,4 @@ export declare abstract class Renko {
      */
     static convertCandlesToRenkoData(candles: Core.ICandleModel, brickSize?: number): Core.ICandleModel;
 }
+export default Renko;

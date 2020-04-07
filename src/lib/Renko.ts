@@ -157,3 +157,4 @@ export abstract class Renko {
         return trendsResponse;
     }
 }
+export default Renko;
