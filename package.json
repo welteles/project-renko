@@ -2,14 +2,13 @@
   "name": "renko",
   "version": "1.0.0",
   "description": "OHVCL Renko",
-  "main": "dist/lib/index.js",
+  "main": "dist/lib/Renko",
   "scripts": {
     "clean": "rimraf dist && rimraf coverage && rimraf .nyc_output && rimraf dist_test",
     "test": "jest --detectOpenHandles --forceExit",
     "test:coverage": "jest --detectOpenHandles --coverage",
     "format": "prettier --write '{src,test}/**/*.ts' && tslint --force --fix --format verbose 'src/**/*.ts'",
-    "build": "npm run clean && tsc -p tsconfig.json --pretty",
-    "start": "npm run build && node dist/lib/teste"
+    "build": "npm run clean && tsc -p tsconfig.json --pretty"
   },
   "author": "Wellington Rocha",
   "license": "ISC",
